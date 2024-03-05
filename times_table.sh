@@ -2,7 +2,6 @@
 while true
 do
 
-#######################################################################################################
 read -p "Enter a number for the multiplication table: " num
 
 if [ $num -lt 0 ]; then
@@ -64,26 +63,25 @@ continue
 
 fi
 
-
-#######################################################################################################
 while true
 do
 
 read -p "Do you want to use the program again? (Enter 'y' for yes, 'n' for no): " ans1
-if [ $ans1 = "y" ]; then
-break
+if [ $ans1 != "n" ] && [ $ans1 != "y" ]; then
+continue
 
 else
-continue
+break
+
 fi
 done
 
-if [ $ans1 = "n" ]; then
+if [ $ans1 = "y" ]; then
+continue
+
+elif [ $ans1 = "n" ]; then
 echo "Thank you for using the program"
 break
 fi
-#######################################################################################################
-
-
 
 done
